@@ -7,8 +7,11 @@ import toast from 'react-hot-toast';
 const Home = () => {
     const tShirts = useLoaderData();
     const [cart, setCart] = useState([]);
+
     const handleAddToCart = (tShirt) => {
+        // console.log(tShirt);
         const exists = cart.find(ts => ts._id === tShirt._id)
+        console.log(exists);
         if (exists) {
             toast('You have already added this t-Shirt')
         }
@@ -22,6 +25,7 @@ const Home = () => {
         toast('You have removed an item')
         // console.log(id);
         const remainingCart = cart.filter(ts => ts._id !== id);
+        // console.log(remainingCart);
         setCart(remainingCart)
     }
     return (
