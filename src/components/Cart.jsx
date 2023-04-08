@@ -28,9 +28,9 @@ const Cart = ({ cart, handleRemoveFromCart }) => {
                 {
                     cart.length !== 3 || <div>False, 3 ta product hoyeche</div>
                 } */}
-                
+
                 {
-                    cart.map((tShirt, index) => <p key={index}>{tShirt.name} <button onClick={() => handleRemoveFromCart(tShirt._id)}>X</button></p>)
+                    cart.map((tShirt, index) => <p key={index}>{tShirt.name} {tShirt.quantity > 0 && tShirt.quantity} <button onClick={() => handleRemoveFromCart(tShirt._id)}>X</button></p>)
                 }
                 <div className="card-actions justify-end">
                     <button className="btn btn-outline btn-info">Review Order</button>
