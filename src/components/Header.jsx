@@ -5,7 +5,7 @@ const Header = () => {
     return (
         <header className="navbar bg-base-100">
             <div className="flex-1">
-                <Link to={"/"} className="normal-case text-3xl font-extrabold">Banglar t-Shirt</Link>
+                <Link to={"/"} className="normal-case text-4xl font-extrabold">Banglar t-Shirt</Link>
             </div>
             <nav className="flex-none">
                 <ul className="flex gap-5 font-semibold">
