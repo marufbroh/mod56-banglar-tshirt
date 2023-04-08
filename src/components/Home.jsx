@@ -11,7 +11,7 @@ const Home = () => {
     const handleAddToCart = (tShirt) => {
         // console.log(tShirt);
         const exists = cart.find(ts => ts._id === tShirt._id)
-        console.log(exists);
+        // console.log(exists);
         if (exists) {
             toast('You have already added this t-Shirt')
         }
@@ -29,8 +29,8 @@ const Home = () => {
         setCart(remainingCart)
     }
     return (
-        <section className='flex gap-6 my-6'>
-            <div className='grid grid-cols-3 gap-6 mx-auto basis-3/4'>
+        <section className='lg:flex lg:gap-6 my-6'>
+            <div className='grid lg:grid-cols-3 gap-6 mx-auto basis-3/4'>
                 {
                     tShirts.map(tShirt => <TShirt key={tShirt.index} tShirt={tShirt} handleAddToCart={handleAddToCart} />)
                 }

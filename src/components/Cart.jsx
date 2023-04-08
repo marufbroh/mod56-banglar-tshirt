@@ -16,7 +16,8 @@ const Cart = ({ cart, handleRemoveFromCart }) => {
         <div className="card w-full glass">
             <div className="card-body">
                 <h2 className="card-title mx-auto">Order Summary {cart.length}</h2>
-                <p className={`font-bold ${cart.length === 3 ? 'bg-green-400' : 'bg-red-400'}`}>common css with ternary using css</p>
+
+                {/* <p className={`font-bold ${cart.length === 3 ? 'bg-green-400' : 'bg-red-400'}`}>common css with ternary using css</p>
                 {
                     cart.length > 2 ? <p>Aroo kino</p> : <p>2 tar beshi kino</p>
                 }
@@ -26,7 +27,8 @@ const Cart = ({ cart, handleRemoveFromCart }) => {
                 }
                 {
                     cart.length !== 3 || <div>False, 3 ta product hoyeche</div>
-                }
+                } */}
+                
                 {
                     cart.map((tShirt, index) => <p key={index}>{tShirt.name} <button onClick={() => handleRemoveFromCart(tShirt._id)}>X</button></p>)
                 }
